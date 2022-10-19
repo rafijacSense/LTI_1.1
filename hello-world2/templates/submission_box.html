@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 id = "title">{% block title %} Add New Submission {% endblock %}</h1>
+    <form method="post" action ="{{ url_for('submit') }}">
+        <textarea name="content"
+                  placeholder="Message content"
+                  rows="15"
+                  cols="60"
+                  >{{ request.form['content'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("title").innerHTML = "blah";
+        console.log("sdasdsad")
+    </script>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 id = "title">{% block title %} Post Student Grades {% endblock %}</h1>
+    <form action="" method="post">
+      <button action ="{{ url_for('submit') }}">Post Grades</button>
+    </form>
+{% endblock %}
